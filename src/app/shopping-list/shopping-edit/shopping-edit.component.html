@@ -1,0 +1,19 @@
+<form  #f="ngForm">
+  <label>Ingredient Name:</label>
+  <input type="text"  name="name" ngModel required />
+  <label>Number:</label>
+  <input
+    type="number"
+   
+    name="amount"
+    ngModel
+    required
+    pattern="^[1-9]+[0-9]*$"
+  />
+  <br />
+  <button id="delete" (click)="onDelete(f)" [disabled]="!f.valid">DELETE</button>
+  <button id="edit" (click)="onEdit(f)" [disabled]="!f.valid">EDIT</button>
+  <button id="add" type="submit" [disabled]="!f.valid" (click)="onAddItem(f)">ADD</button>
+</form>
+<!-- (ngSubmit)="onAddItem(f)" --> 
+<!-- value={{placeholder_amount}} value={{placeholder_name}} -->

@@ -1,0 +1,13 @@
+input,textarea{width: 80%;}
+input,label{
+     display: block;
+}
+.ingredients {
+     width:80%;
+     display: flex;
+     gap: 10%;
+}
+#danger{
+     background-color: red;
+     color: white;
+}

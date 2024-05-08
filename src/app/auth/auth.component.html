@@ -1,0 +1,12 @@
+<p>auth works!</p>
+<h1 *ngIf="error" id="err">{{error}}</h1>
+<form #myform="ngForm">
+     <h1>email:</h1>
+     <input id="email" ngModel name="email" type="email" required>
+     <h1>Passcode:</h1>
+     <input id="passcode" ngModel name="passcode" required minlength="6">
+     <br>
+     <hr>
+     <button (click)="onSignUp()" [disabled]="!myform.valid">SIGN UP</button>
+     <button  (click)="onSignIn()" [disabled]="!myform.valid">SIGN IN</button>
+</form>

@@ -1,0 +1,20 @@
+<p>recipe-detail works!</p>
+<div *ngIf="recipe else infotext" >
+  <h2>{{recipe.name}}</h2>
+  <select #manage (change)="to_shopping_list(manage.value)">
+  
+    <option disabled selected value="null">Manage recipe</option>
+    <option value="edit"><a href="#">EDIT</a></option>
+    <option value="delete"><a href="#">DELETE</a></option>
+    <option value="shopping"><a >TO SHOPPING LIST</a></option>
+  </select>
+  <div class="details">
+    <img src={{recipe.imagePath}}/>
+       <h5>{{recipe.description}}</h5>
+       <!-- <h5 *ngFor="ingri of recipe.ingredients">{{ingri.name}} - {{ingri}}</h5> -->
+       <h5 *ngFor="let ingri of recipe.ingredients">{{ingri.name}}-{{ingri.amount}}</h5>
+  </div>
+</div>
+<ng-template #infotext>
+  <p>Please Select</p>
+</ng-template>

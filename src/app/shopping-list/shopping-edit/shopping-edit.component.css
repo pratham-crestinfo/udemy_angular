@@ -1,0 +1,20 @@
+
+button{
+     padding: 4.8px 9.6px;
+     color: white;
+     margin: 4.8px;
+     border-radius: 9px;
+}
+#delete{
+     background-color: red;
+}
+#edit{
+     background-color: blue;
+}
+#add{
+     background-color: green;
+}
+#add:disabled,#edit:disabled,#delete:disabled{
+     background-color: grey;
+opacity: 0.5;
+}

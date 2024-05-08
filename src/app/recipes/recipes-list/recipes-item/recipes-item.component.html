@@ -1,0 +1,11 @@
+<a [routerLink]="[recipe.id]" routerLinkActive="active">
+<div class="recipe-list" >
+     <div class="recipe-info">
+          <p>{{recipe.name}}</p>
+          <p>{{recipe.description}}</p>
+     </div>
+     <div class="recipe-img">
+          <img src={{recipe.imagePath}}>
+     </div>
+</div>
+</a>

@@ -1,0 +1,17 @@
+<nav>
+  <div id="nav-left">
+    <h3>Dadi ki Rasoi</h3>
+
+    <a [routerLink] ='["/recipes"]' routerLinkActive="active">Recipes</a>
+    <a [routerLink] ='["/shopping-list"]' routerLinkActive="active">Shopping-list</a> 
+    <a [routerLink] ='["/auth"]' routerLinkActive="active">Auth</a> 
+  </div>
+  <div id="nav-right">
+ <select name="cars" id="cars" #f (change)="onChange(f.value)">
+  <option value="volvo" disabled selected="true"  >manage</option>
+  <option value="save">SAVE DATA</option>
+  <option value="fetch">FETCH DATA</option>
+</select>
+  </div>
+</nav>
+

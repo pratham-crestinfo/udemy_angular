@@ -1,0 +1,30 @@
+nav{
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-direction: row;
+     padding:24px;
+     background-color: green;
+}
+nav > * >*{
+     color: white;
+     margin: 0 9.6px;
+    
+}
+#nav-left{
+     display: flex;
+     flex-direction: row;
+     justify-items: center;
+     align-items: center;
+}
+
+select{
+     color: black;
+     background-color: green;
+     border: 1px solid white;
+     padding:4.8px 9.6px
+}
+.active{
+     text-decoration: underline;
+     font-weight: 800;
+}

@@ -1,0 +1,14 @@
+<p>shopping-list works!</p>
+<app-shopping-edit></app-shopping-edit>
+<form *ngIf="editing" (ngSubmit)="editItem(editForm)" #editForm="ngForm">
+     <input  placeholder={{nameEdit}} ngModel name="editing_name" required/>
+     <input  placeholder={{amountEdit}} ngModel name="editing_amount" required/>
+<button id="delete" (click)="delete_item()">DELETE</button>
+<button id="edit" type="submit" [disabled]="!editForm.valid">EDIT</button>
+</form>
+
+<div *ngFor="let ing of Ings;let i=index">
+     <a (click)="onEditItem(i)">
+          {{ing.name}}<span>{{ing.amount}}</span>
+     </a>
+</div>

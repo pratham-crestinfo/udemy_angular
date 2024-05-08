@@ -1,0 +1,24 @@
+
+.recipe-list {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  margin: 24px;
+  border: 1px solid black;
+  border-radius: 9px;
+}
+.recipe-list:nth-child(odd)
+{
+  background-color:gray;
+}
+.recipe-img img {
+  width: 100px;
+  height: 100px;
+
+}
+.recipe-info {
+     margin: 0 50px 0 0;
+     width: auto;
+   }
+   

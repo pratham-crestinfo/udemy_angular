@@ -1,0 +1,28 @@
+
+.recipe-list {
+     display: flex;
+     align-items: center;
+     justify-items: center;
+     justify-content: space-between;
+     margin: 24px;
+     border: 1px solid black;
+     border-radius: 9px;
+     text-decoration: none;
+     color: black;
+     background-color: white;
+   }
+   .recipe-img img {
+     width: 100px;
+     height: 100px;   
+   }
+   .recipe-info {
+        margin: 0 50px 0 0;
+        width: auto;
+      }  
+  a{
+    cursor: pointer;
+   }
+   .active div{
+    color:white;
+   background-color: green;
+  }

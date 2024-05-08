@@ -1,0 +1,30 @@
+<p>recipe-edit works!</p>
+<p>id:{{ id }}</p>
+<form [formGroup]="detailsform">
+  <label for="recipe_name"> Recipe Name: </label>
+  <input type="text" formControlName="recipe_name" />
+
+  <label for="recipe_description"> Recipe Description: </label>
+  <textarea  formControlName="recipe_description"></textarea>
+
+  <label for="recipe_imgPath"> Recipe Image Path: </label>
+  <input type="text"  formControlName="recipe_imgPath" />
+
+  <label>Ingredients:</label>
+  <div class="ingredients" *ngFor="let ing of Ingri_copy;let i=index">
+    <input id="ingredient_name" value={{ing.name}}/>
+    <input id="ingredient_amount"  value={{ing.amount}}/>
+    <button id="danger" (click)="onDelete(i)">X</button>
+  </div>
+  <button (click)="add_ing()">ADD Ingredient</button>
+</form>
+
+<form (ngSubmit)="onAdd()" #ing_form="ngForm" *ngIf="display">
+     <div class="ingredients">
+          <input ngModel name="ing_name" required/>
+          <input ngModel name="ing_amount" required type="number"/>
+          <button type="submit"   [disabled]="!ing_form.valid">+</button>
+     </div>
+</form>
+<button (click)="onSave()"> SAVE</button>
+<button (click)="onCancel()">CANCEL</button>
